@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- EN: animal droppings -->
+  <RimScentExtended_Scent_AnimalFilth.stages.animal_droppings.label>crottes d'animaux</RimScentExtended_Scent_AnimalFilth.stages.animal_droppings.label>
+  <!-- EN: The warm, sour reek of animal droppings. Someone should clean the barn. -->
+  <RimScentExtended_Scent_AnimalFilth.stages.animal_droppings.description>L'odeur tiède et aigre des crottes d'animaux. Quelqu'un devrait nettoyer l'étable.</RimScentExtended_Scent_AnimalFilth.stages.animal_droppings.description>
+
+  <!-- EN: livestock smell -->
+  <RimScentExtended_Scent_Livestock.stages.livestock_smell.label>odeur de bétail</RimScentExtended_Scent_Livestock.stages.livestock_smell.label>
+  <!-- EN: Hide, hay and warm animal. Not foul, exactly, but it clings to everything. -->
+  <RimScentExtended_Scent_Livestock.stages.livestock_smell.description>Du cuir, du foin et de la bête tiède. Pas vraiment nauséabond, mais ça s'accroche à tout.</RimScentExtended_Scent_Livestock.stages.livestock_smell.description>
+
+</LanguageData>

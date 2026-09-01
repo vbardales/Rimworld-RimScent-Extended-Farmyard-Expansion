@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Une ruche sent la cire chaude et le miel, en permanence : pas de comp de courant
+       ni de combustible ici, et c'est correct - une ruche n'a pas d'interrupteur.
+       Le tonneau d'hydromel, le miel et la propolis partagent la meme famille d'odeur. -->
+
+  <ThoughtDef>
+    <defName>RimScentExtended_Scent_Beehive</defName>
+    <durationDays>0.1</durationDays>
+    <stackLimit>2</stackLimit>
+    <stages>
+      <li>
+        <label>wax and honey</label>
+        <description>Warm beeswax and honey. It is a thick, drowsy, summery smell.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

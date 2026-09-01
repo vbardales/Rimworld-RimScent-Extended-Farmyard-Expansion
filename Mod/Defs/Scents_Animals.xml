@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- RimScent donne une odeur a dix saletes vanilla - cendre, sang, bile, terre,
+       carburant, huile, dechets, vomi... - mais pas a Filth_AnimalFilth. Les crottes
+       d'animaux ne sentaient donc rien, ce qui est le trou le plus visible du mod
+       quand on eleve du betail. -->
+
+  <ThoughtDef>
+    <defName>RimScentExtended_Scent_AnimalFilth</defName>
+    <durationDays>0.1</durationDays>
+    <stackLimit>4</stackLimit>
+    <stages>
+      <li>
+        <label>animal droppings</label>
+        <description>The warm, sour reek of animal droppings. Someone should clean the barn.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- L'odeur des betes elles-memes, distincte de celle de leurs crottes. Voir
+       ModExtension_PawnScent : elle ne se declenche qu'au-dessus de FilthRate 4, le
+       seuil exact de Alert_AnimalFilth en vanilla. Un animal ne sent donc que lorsque
+       le jeu lui-meme le juge assez sale pour alerter le joueur - et Housebroken, qui
+       multiplie FilthRate par la proprete de l'animal, eteint l'odeur en meme temps
+       que l'alerte, sans qu'aucun des deux mods connaisse l'autre.
+
+       Effet faible et cumulable : un animal de compagnie passe inapercu, une etable
+       pleine ne passe pas. -->
+
+  <ThoughtDef>
+    <defName>RimScentExtended_Scent_Livestock</defName>
+    <durationDays>0.1</durationDays>
+    <stackLimit>4</stackLimit>
+    <stages>
+      <li>
+        <label>livestock smell</label>
+        <description>Hide, hay and warm animal. Not foul, exactly, but it clings to everything.</description>
+        <baseMoodEffect>-1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

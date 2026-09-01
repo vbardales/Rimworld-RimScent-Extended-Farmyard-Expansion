@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Meme precaution qu'en amont : un autre mod peut avoir pose des modExtensions sur
+       ces defs, auquel cas il faut s'ajouter a la liste existante plutot que de creer
+       un second noeud. D'ou le couple match / nomatch. -->
+
+  <!-- 1. Les crottes. Un pion dysosmique ou insensible aux odeurs biologiques y echappe :
+          Bloodlust et Psychopath ne sont pas concernes ici (le sang, oui, la bouse, non),
+          mais VTE_Desensitized l'est, comme en amont pour le sang. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="Filth_AnimalFilth"]/modExtensions</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Filth_AnimalFilth"]/modExtensions</xpath>
+      <value>
+        <li Class="RimScentReworked.ModExtension_Scent">
+          <thought>RimScentExtended_Scent_AnimalFilth</thought>
+          <anosmicTraits>
+            <li MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Desensitized</li>
+          </anosmicTraits>
+        </li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Filth_AnimalFilth"]</xpath>
+      <value>
+        <modExtensions>
+          <li Class="RimScentReworked.ModExtension_Scent">
+            <thought>RimScentExtended_Scent_AnimalFilth</thought>
+            <anosmicTraits>
+              <li MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Desensitized</li>
+            </anosmicTraits>
+          </li>
+        </modExtensions>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- 2. Les betes elles-memes, sur le parent abstrait de tous les animaux : les mods
+          animaliers qui heritent d'AnimalThingBase - la quasi-totalite - sont couverts
+          sans avoir a les enumerer. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[@Name="AnimalThingBase"]/modExtensions</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[@Name="AnimalThingBase"]/modExtensions</xpath>
+      <value>
+        <li Class="RimScentExtended.ModExtension_PawnScent">
+          <thought>RimScentExtended_Scent_Livestock</thought>
+          <aboveStat>FilthRate</aboveStat>
+          <aboveValue>4</aboveValue>
+        </li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[@Name="AnimalThingBase"]</xpath>
+      <value>
+        <modExtensions>
+          <li Class="RimScentExtended.ModExtension_PawnScent">
+            <thought>RimScentExtended_Scent_Livestock</thought>
+            <aboveStat>FilthRate</aboveStat>
+            <aboveValue>4</aboveValue>
+          </li>
+        </modExtensions>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

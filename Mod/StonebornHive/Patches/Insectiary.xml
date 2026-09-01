@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Un pion degoute par la ruche n'est pas celui qui la trouve appetissante : Cannibal
+       et Bloodlust ne sont pas concernes, mais un insensible aux odeurs biologiques l'est,
+       comme en amont pour le sang. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="SC_ArtificialHive"]/modExtensions</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="SC_ArtificialHive"]/modExtensions</xpath>
+      <value>
+        <li Class="RimScentReworked.ModExtension_Scent">
+          <thought>RimScentExtended_Scent_Insectiary</thought>
+          <anosmicTraits>
+            <li MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Desensitized</li>
+          </anosmicTraits>
+        </li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="SC_ArtificialHive"]</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="SC_ArtificialHive"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="RimScentReworked.ModExtension_Scent">
+              <thought>RimScentExtended_Scent_Insectiary</thought>
+              <anosmicTraits>
+                <li MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Desensitized</li>
+              </anosmicTraits>
+            </li>
+          </modExtensions>
+        </value>
+      </match>
+    </nomatch>
+  </Operation>
+
+</Patch>

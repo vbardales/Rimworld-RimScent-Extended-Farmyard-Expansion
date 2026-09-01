@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>RimScent Extended: Farmyard Expansion</name>
+	<author>nelim</author>
+	<packageId>nelim.rimscent.extended.farmyard</packageId>
+	<description>Livestock smells, and so does what it leaves behind.
+
+RimScent gives ten vanilla filth types a smell but never animal droppings — the most obvious gap the moment you keep animals. A rotting corpse in the dining room was already covered; a barn floor was not.
+
+WHAT SMELLS
+- Animal droppings, at a real penalty. The stench of a barn nobody has mucked out.
+- The animals themselves, faintly, and only past a threshold. Hide, hay and warm animal — not foul exactly, but it clings.
+- Beehives, wild hives, mead casks, honey and propolis: warm beeswax, thick and summery.
+- The insectiary from Stoneborn Cuisine: chitin, jelly and something sharply ammoniac.
+
+THE THRESHOLD IS THE GAME'S OWN
+An animal only smells once its filth rate passes 4 — the exact value RimWorld's own animal filth alert tests before warning you. **An animal smells when the game already thinks it is dirty enough to complain about**, not before. A clean, well-trained beast is odourless.
+
+That has a useful consequence. If you run Housebroken, which multiplies filth rate by how house-trained an animal is, its cleanliness bonus silences the smell and the alert together — without either mod knowing the other exists.
+
+Animals cannot carry a scent in RimScent on their own: it reads a neighbour's hediffs but never their race def. This uses ModExtension_PawnScent from RimScent Extended, which is why the socle is required.
+
+Nothing is written to the save. Ships in English with a French translation injected on top, so it works in any language.
+
+Requires RimScent and RimScent Extended. Bees and Stoneborn Cuisine support loads only if those mods are active.</description>
+	<modVersion>0.1.0</modVersion>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>reo.RimScent</packageId>
+			<displayName>RimScent</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/3645569466</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>nelim.rimscent.extended</packageId>
+			<displayName>RimScent Extended</displayName>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+		<li>Ludeon.RimWorld</li>
+		<li>reo.RimScent</li>
+		<!-- Le socle porte ModExtension_PawnScent, sans laquelle les animaux ne sentent
+		     rien : il faut passer apres lui. -->
+		<li>nelim.rimscent.extended</li>
+		<li>adamas.bees</li>
+		<li>det.sbcuisine</li>
+	</loadAfter>
+</ModMetaData>

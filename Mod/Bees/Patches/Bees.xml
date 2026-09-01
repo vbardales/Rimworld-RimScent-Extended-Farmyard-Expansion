@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[(defName="Bees_Beehive" or defName="Bees_Wildhive" or defName="Bees_MeadFermentingBarrel" or defName="Bees_Mead" or defName="Bees_Propolis") and modExtensions]/modExtensions</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[(defName="Bees_Beehive" or defName="Bees_Wildhive" or defName="Bees_MeadFermentingBarrel" or defName="Bees_Mead" or defName="Bees_Propolis") and modExtensions]/modExtensions</xpath>
+      <value>
+        <li Class="RimScentReworked.ModExtension_Scent">
+          <thought>RimScentExtended_Scent_Beehive</thought>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[(defName="Bees_Beehive" or defName="Bees_Wildhive" or defName="Bees_MeadFermentingBarrel" or defName="Bees_Mead" or defName="Bees_Propolis") and not(modExtensions)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[(defName="Bees_Beehive" or defName="Bees_Wildhive" or defName="Bees_MeadFermentingBarrel" or defName="Bees_Mead" or defName="Bees_Propolis") and not(modExtensions)]</xpath>
+      <value>
+        <modExtensions>
+          <li Class="RimScentReworked.ModExtension_Scent">
+            <thought>RimScentExtended_Scent_Beehive</thought>
+          </li>
+        </modExtensions>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

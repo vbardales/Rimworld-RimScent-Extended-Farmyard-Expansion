@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- L'insectarium de Stoneborn - Cuisine. Il n'a aucune alimentation, donc l'odeur est
+       permanente : une ruche d'insectes n'a pas d'interrupteur. -->
+
+  <ThoughtDef>
+    <defName>RimScentExtended_Scent_Insectiary</defName>
+    <durationDays>0.1</durationDays>
+    <stackLimit>2</stackLimit>
+    <stages>
+      <li>
+        <label>insectiary</label>
+        <description>Chitin, jelly and something sharply ammoniac. The hive smell gets into clothes.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>
