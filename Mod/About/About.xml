@@ -36,6 +36,7 @@ Requires RimScent and RimScent Extended. Bees and Stoneborn Cuisine support load
 		<li>
 			<packageId>nelim.rimscent.extended</packageId>
 			<displayName>RimScent Extended</displayName>
+			<downloadUrl>https://github.com/vbardales/Rimworld-RimScent-Extended</downloadUrl>
 		</li>
 	</modDependencies>
 	<loadAfter>
