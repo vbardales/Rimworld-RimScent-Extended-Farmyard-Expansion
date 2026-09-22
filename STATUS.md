@@ -8,7 +8,7 @@ packageId:    nelim.rimscent.extended.farmyard
 repo:         Rimworld-RimScent-Extended-Farmyard-Expansion
 visibility:   public
 detached:     yes
-stage:        horsMonoRepo
+stage:        preOptions
 licence:      open
 licence_at:   the same MIT base as RimScent Extended
 dependencies: declared
@@ -17,6 +17,7 @@ tested_on:
 workshop:
 remaining:
   - unverified: Check-DefInjected.ps1 did not reach a terminal result during the 2026-09-22 audit
+  - unverified: Check-XmlFields.ps1 and Check-DefRefs.ps1 did not reach terminal results in the 2026-09-22 session
   - unverified: no automated, XML-result, functional, Pickle, or in-game test scenario exists
   - unverified: never seen running, including English/French display and optional Bees/Stoneborn Cuisine loading
 session:      maj:        2026-09-12, releve automatique
@@ -52,6 +53,13 @@ to anyone — not a name, not an idea traceable to one mod, not a value derived 
 Audited against `AUDIT.md`, `PUBLISHING.md`, `MOD_SETTINGS.md`, `TRANSLATIONS.md`, and
 `STYLE_RIMWORLD.md`. The repository is now an autonomous Git repository with its own
 `origin` remote and pushed `main` branch. The `horsMonoRepo` transition is complete.
+
+After the documentation remediation, `preOptions` is the last cumulatively justified stage:
+the required root/distributed licence and attribution files, changelog, Git attributes/ignore
+rules, repository URL, and final `Source code on GitHub` description link are present. Direct
+inspection of Preview and ModIcon remains the evidence for the image stages. The WSL palette
+measurement could not start because WSL returned `E_ACCESSDENIED`; it is not presented as a
+successful palette check.
 
 Static checks passed:
 
