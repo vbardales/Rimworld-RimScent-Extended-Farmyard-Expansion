@@ -7,7 +7,7 @@ mod:          RimScent Extended: Farmyard Expansion
 packageId:    nelim.rimscent.extended.farmyard
 repo:         Rimworld-RimScent-Extended-Farmyard-Expansion
 visibility:   public
-detached:     no
+detached:     yes
 stage:        dansMonoRepo
 licence:      open
 licence_at:   the same MIT base as RimScent Extended
@@ -18,6 +18,7 @@ workshop:
 remaining:
   - defect: the distributed About.xml has neither its required repository <url> nor the final Source code on GitHub description link
   - defect: required repository/publication files are absent (.gitignore, .gitattributes, CHANGELOG.md, Mod/ATTRIBUTION.md, and PUBLICATION.md)
+  - unverified: initial commit 68c6033 is local only; pushing to the configured GitHub remote awaits explicit approval
   - unverified: Check-DefInjected.ps1 did not reach a terminal result during the 2026-09-22 audit
   - unverified: no automated, XML-result, functional, Pickle, or in-game test scenario exists
   - unverified: never seen running, including English/French display and optional Bees/Stoneborn Cuisine loading
