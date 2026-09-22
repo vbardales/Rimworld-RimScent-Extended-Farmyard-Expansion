@@ -8,7 +8,7 @@ packageId:    nelim.rimscent.extended.farmyard
 repo:         Rimworld-RimScent-Extended-Farmyard-Expansion
 visibility:   public
 detached:     yes
-stage:        dansMonoRepo
+stage:        horsMonoRepo
 licence:      open
 licence_at:   the same MIT base as RimScent Extended
 dependencies: declared
@@ -16,8 +16,6 @@ showcase:     complete
 tested_on:
 workshop:
 remaining:
-  - defect: the distributed About.xml has neither its required repository <url> nor the final Source code on GitHub description link
-  - defect: required repository/publication files are absent (.gitignore, .gitattributes, CHANGELOG.md, Mod/ATTRIBUTION.md, and PUBLICATION.md)
   - unverified: Check-DefInjected.ps1 did not reach a terminal result during the 2026-09-22 audit
   - unverified: no automated, XML-result, functional, Pickle, or in-game test scenario exists
   - unverified: never seen running, including English/French display and optional Bees/Stoneborn Cuisine loading
@@ -52,8 +50,8 @@ to anyone — not a name, not an idea traceable to one mod, not a value derived 
 ## Audit — 2026-09-22
 
 Audited against `AUDIT.md`, `PUBLISHING.md`, `MOD_SETTINGS.md`, `TRANSLATIONS.md`, and
-`STYLE_RIMWORLD.md`. The repository remains at `dansMonoRepo`: it is a directory in the
-shared monorepo, not an autonomous Git repository with its own remote and first pushed commit.
+`STYLE_RIMWORLD.md`. The repository is now an autonomous Git repository with its own
+`origin` remote and pushed `main` branch. The `horsMonoRepo` transition is complete.
 
 Static checks passed:
 
