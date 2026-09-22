@@ -19,9 +19,9 @@ that loads solely when the mod is active:
 
 ## Housebroken
 
-by **nelim** — the interaction with it is deliberate but requires no coupling whatsoever.
+by **Nelim** — the interaction with it is deliberate but requires no coupling whatsoever.
 Both mods act on `FilthRate`; neither references the other.
 
 ## This mod
 
-MIT, © nelim. Defs, patches, thresholds and translations are original work.
+MIT, © Nelim. Defs, patches, thresholds and translations are original work.
