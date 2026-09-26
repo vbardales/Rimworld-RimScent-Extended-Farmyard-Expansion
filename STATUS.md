@@ -1,5 +1,5 @@
 ---
-settings_audit: partial
+settings_audit: not_applicable
 localization: partial
 translation_en: partial
 translation_fr: partial
@@ -8,7 +8,7 @@ packageId:    nelim.rimscent.extended.farmyard
 repo:         Rimworld-RimScent-Extended-Farmyard-Expansion
 visibility:   public
 detached:     yes
-stage:        preOptions
+stage:        options
 licence:      open
 licence_at:   the same MIT base as RimScent Extended
 dependencies: declared
@@ -18,10 +18,11 @@ workshop:
 remaining:
   - unverified: Check-DefInjected.ps1 did not reach a terminal result during the 2026-09-22 audit
   - unverified: Check-XmlFields.ps1 and Check-DefRefs.ps1 did not reach terminal results in the 2026-09-22 session
-  - unverified: no automated, XML-result, functional, Pickle, or in-game test scenario exists
-  - unverified: never seen running, including English/French display and optional Bees/Stoneborn Cuisine loading
-session:      maj:        2026-09-12, releve automatique
-updated:      2026-09-12, automatic sweep
+  - unverified: Check-DefInjected.ps1 again ended without its terminal keys/errors summary on 2026-09-26
+  - unverified: the complete dispatcher Pickle matrix has not yet produced terminal reports (base, Bees, and Stoneborn Cuisine in English and French)
+  - unverified: Mod/About/PublishedFileId.txt from the 0.1.0 prepublication is not present in this checkout
+session:      options:    2026-09-26, static settings and test-matrix update
+updated:      2026-09-26, audit follow-up
 ---
 
 # RimScent Extended: Farmyard Expansion — status
@@ -96,3 +97,30 @@ readable mascot and farmyard motif at its native 128 x 128 size. The artwork sou
 `Art/Preview-source.png` (1254 x 1254), rather than the current `Art/Preview.png`
 convention. Palette measurement and the associated source/overlay composition records remain
 unverified.
+
+## Audit follow-up — 2026-09-26
+
+Re-read `AUDIT.md` at the version recorded in `docs/PROTOCOLS-READ.md`. The static settings
+check is now established: `pwsh -NoProfile -File Tests/Check-Mod.ps1` passed, parsing all 11
+distributed XML files and finding no settings implementation, MainButtons definition, assembly,
+or C# source. Under the current audit rule, the content-only mod therefore has no applicable
+settings, persistence, or shortcut test and the cumulatively justified stage advances from
+`preOptions` to `options`.
+
+`TESTING.md` defines the complete six-pass certification matrix. The base, Bees, and Stoneborn
+Cuisine scenarios have no `@wip`; the optional features are tagged with their actual package IDs
+and must run through TicketDispatcher in both English and French. Evidence reports are ignored
+on disk under `Tests/Pickle/Evidence/`; only the current terminal evidence and compact
+`docs/runs/` summary may remain. No ticket watcher or Codex heartbeat will be created: the
+TicketDispatcher owns monitoring.
+
+The two optional map IDs were checked against their Workshop pages: Alpha Bees `1558161673` and
+Stoneborn - Cuisine `3725224779`. The original RimScent source was found on Steam only; no
+public Git repository was found in the targeted search, so upstream PRs to it are not currently
+available. RimScent Extended, the declared engine dependency, is a separate clean Git repository
+at `../RimScentExtended` with origin `https://github.com/vbardales/Rimworld-RimScent-Extended.git`.
+
+The 0.1.0 prepublication was reported by the owner, but its generated
+`Mod/About/PublishedFileId.txt` has not appeared in this checkout or the default local RimWorld
+Mods directory. Until its exact generated file is copied here, the prepublication cannot be
+recorded as a reproducible repository state.

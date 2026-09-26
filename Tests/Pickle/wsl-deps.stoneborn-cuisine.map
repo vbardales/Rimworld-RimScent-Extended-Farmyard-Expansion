@@ -1,0 +1,4 @@
+# Optional integration pass. Keep the terminal newline: the staging reader otherwise drops it.
+reo.RimScent 3645569466
+nelim.rimscent.extended path:RimScentExtended/Mod
+det.sbcuisine 3725224779

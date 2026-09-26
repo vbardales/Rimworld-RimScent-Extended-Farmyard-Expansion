@@ -4,6 +4,11 @@ Read on 2026-09-26 for the Farmyard Expansion at local commit
 `e451728b23e157d477b497cb59261a46b0d25952`. A SHA-256 below identifies the exact content
 read, including documentation maintained outside this repository.
 
+`../AUDIT.md` was re-read on 2026-09-26 before the present test/evidence work; it remains at
+the SHA-256 recorded below. Its current rules supersede the 2026-09-22 direct Pickle run:
+TicketDispatcher owns ticket monitoring, and a session creates neither a Pickle watcher nor a
+heartbeat for its own ticket.
+
 Re-read policy: re-read a row only when it changes **and** the planned action falls within its
 `Use now` scope. Rows marked `Deferred` were not useful for the current `preOptions`/test-evidence
 work; do not re-read them merely because they changed.
