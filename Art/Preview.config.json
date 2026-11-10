@@ -1,0 +1,22 @@
+{
+  "panel": {
+    "title": "RimScent Extended: Farmyard Expansion",
+    "titleParts": [
+      { "text": "RimScent" },
+      { "text": "Extended:", "font": "ui", "scale": 0.56 },
+      { "text": "Farmyard" },
+      { "text": "Expansion", "suffix": true }
+    ],
+    "description": "Animals, filth and farm work all carry their own scent."
+  },
+  "background": { "file": "Preview-source.png" },
+  "icon": { "file": "ModIcon-source.png" },
+  "echo": { "file": "echo-concept.png" },
+  "palette": {
+    "veil": "#33291F",
+    "inkPrimary": "#F4EDDF",
+    "inkSecondary": "#D1B36D",
+    "accent": "#C88A3A",
+    "badgeInk": "#17120D"
+  }
+}
