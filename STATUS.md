@@ -2,13 +2,13 @@
 settings_audit: not_applicable
 localization: partial
 translation_en: partial
-translation_fr: partial
+translation_fr: unchecked
 mod:          RimScent Extended: Farmyard Expansion
 packageId:    nelim.rimscent.extended.farmyard
 repo:         Rimworld-RimScent-Extended-Farmyard-Expansion
 visibility:   public
 detached:     yes
-stage:        options
+workflow_stage: setupRepo
 licence:      open
 licence_at:   the same MIT base as RimScent Extended
 dependencies: declared
@@ -20,9 +20,15 @@ remaining:
   - unverified: Check-XmlFields.ps1 and Check-DefRefs.ps1 did not reach terminal results in the 2026-09-22 session
   - unverified: Check-DefInjected.ps1 again ended without its terminal keys/errors summary on 2026-09-26
   - unverified: the complete dispatcher Pickle matrix has not yet produced terminal reports (base, Bees, and Stoneborn Cuisine in English and French)
-  - unverified: Mod/About/PublishedFileId.txt from the 0.1.0 prepublication is not present in this checkout
+  - unverified: Mod/About/PublishedFileId.txt (3811307974) is now present but untracked; confirm it matches the 0.1.0 prepublication
+  - unverified: 1.a duplicate check (Search-Workshop.sh) not run, needs owner approval
+  - unverified: 1.h STATUS.md lacks remote and upstream_mod_remotes, to write from the template
+  - unverified: 1.j Check-Status reached no ERROR on 2026-11-10, replay ledger stops at setupRepo
+  - unverified: 2.b (next section, not replayed) ModIcon.png older than ModIcon-source.png, Render-Preview refuses its transparent padding
+  - defect: Art/Preview.config.json, ModIcon-source.png, echo-concept.png untracked, Preview.png modified and uncommitted
 session:      options:    2026-09-26, static settings and test-matrix update
-updated:      2026-09-26, audit follow-up
+updated:      2026-11-10, replay-audit
+protocols_read_sha: 2f038180d537e2f3a2a9bca34cb5f65a37cde9f9
 ---
 
 # RimScent Extended: Farmyard Expansion — status
