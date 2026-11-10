@@ -6,11 +6,13 @@ translation_fr: unchecked
 mod:          RimScent Extended: Farmyard Expansion
 packageId:    nelim.rimscent.extended.farmyard
 repo:         Rimworld-RimScent-Extended-Farmyard-Expansion
+remote:       https://github.com/vbardales/Rimworld-RimScent-Extended-Farmyard-Expansion.git
 visibility:   public
 detached:     yes
-workflow_stage: setupRepo
+workflow_stage: code[1.0.0]
 licence:      open
 licence_at:   the same MIT base as RimScent Extended
+upstream_mod_remotes: N/A      # RimScent (3645569466) is Steam only, no public git repository found 2026-09-26
 dependencies: declared
 showcase:     complete
 tested_on:
@@ -20,15 +22,11 @@ remaining:
   - unverified: Check-XmlFields.ps1 and Check-DefRefs.ps1 did not reach terminal results in the 2026-09-22 session
   - unverified: Check-DefInjected.ps1 again ended without its terminal keys/errors summary on 2026-09-26
   - unverified: the complete dispatcher Pickle matrix has not yet produced terminal reports (base, Bees, and Stoneborn Cuisine in English and French)
-  - unverified: Mod/About/PublishedFileId.txt (3811307974) is now present but untracked; confirm it matches the 0.1.0 prepublication
-  - unverified: 1.a duplicate check (Search-Workshop.sh) not run, needs owner approval
-  - unverified: 1.h STATUS.md lacks remote and upstream_mod_remotes, to write from the template
-  - unverified: 1.j Check-Status reached no ERROR on 2026-11-10, replay ledger stops at setupRepo
-  - unverified: 2.b (next section, not replayed) ModIcon.png older than ModIcon-source.png, Render-Preview refuses its transparent padding
-  - defect: Art/Preview.config.json, ModIcon-source.png, echo-concept.png untracked, Preview.png modified and uncommitted
+  - unverified: Mod/About/PublishedFileId.txt (3811307974, matches the installed Workshop item) is untracked, decide whether to commit it
+  - open 3.c: CHANGELOG.md has no ## [Unreleased] section for 1.0.0
 session:      options:    2026-09-26, static settings and test-matrix update
-updated:      2026-11-10, replay-audit
-protocols_read_sha: 2f038180d537e2f3a2a9bca34cb5f65a37cde9f9
+updated:      2026-11-10, replay-audit to code[1.0.0]
+protocols_read_sha: e4ef6f89596a4ef3379e757fd803dbc5c630b921
 ---
 
 # RimScent Extended: Farmyard Expansion — status
