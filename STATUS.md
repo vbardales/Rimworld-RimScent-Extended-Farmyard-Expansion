@@ -9,7 +9,7 @@ repo:         Rimworld-RimScent-Extended-Farmyard-Expansion
 remote:       https://github.com/vbardales/Rimworld-RimScent-Extended-Farmyard-Expansion.git
 visibility:   public
 detached:     yes
-workflow_stage: writeTests[1.0.0]
+workflow_stage: playTests[1.0.0]
 licence:      open
 licence_at:   the same MIT base as RimScent Extended
 upstream_mod_remotes: N/A      # RimScent (3645569466) is Steam only, no public git repository found 2026-09-26
@@ -22,10 +22,9 @@ remaining:
   - unverified: the complete dispatcher Pickle matrix has not yet produced terminal reports (base, Bees, and Stoneborn Cuisine in English and French)
   - unverified: settings audit runtime check (no empty Mod options page, no visible or greyed MainButtons shortcut in a clean game), planned for playTests
   - unverified: in-game display of the EN and FR texts (raw keys, fallback, clipping), planned for playTests
-  - open 7.a: Pickle scenarios only assert that defs exist and no error is logged; no scenario per promised behavior (animal filth, livestock FilthRate 4, Bees, Stoneborn), PUBLICATION.md absent
 session:      options:    2026-09-26, static settings and test-matrix update
-updated:      2026-11-11, writeTests replay: 7.b green, awaiting Audit validation; 7.a open
-protocols_read_sha: ef13379748eaf57e42f8b2c03648c2d41f1604a6
+updated:      2026-11-11, writeTests done, advance to playTests
+protocols_read_sha: 23a988df9c0997847c27c18bc4512d9fa6526327
 ---
 
 # RimScent Extended: Farmyard Expansion — status
@@ -201,4 +200,6 @@ Read at the commit that adds `Tests/Rule-OwnValues.ps1`.
   `Check-Translations` PASS.
 - **7.d Pickle suites:** three features in `Tests/Pickle/Mod/Pickle/Features/`, `@requires`
   `adamas.bees` and `det.sbcuisine` with a dedicated dependency map each, no `@wip`. Not run.
-- **7.a, 7.f, 7.h:** open, see `remaining`. No run exists yet (`docs/runs/` empty of results).
+- **7.a:** functional scenarios written in `TESTING.md` (seven, one per README behavior), four Pickle features now assert the wiring and load audit; the maps stage `nelim.pickletools.deffields` and `loadaudit`.
+- **7.f tested revision:** offline checks (`Test-Mod.ps1`, 6 passed) ran at the commit before 601fee4; no code commit since. No Pickle run yet.
+- **7.h:** recorded here; `docs/runs/` holds no run, the six passes (base, Bees, Stoneborn in English and French) are the `playTests` work.
