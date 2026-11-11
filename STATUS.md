@@ -9,11 +9,12 @@ repo:         Rimworld-RimScent-Extended-Farmyard-Expansion
 remote:       https://github.com/vbardales/Rimworld-RimScent-Extended-Farmyard-Expansion.git
 visibility:   public
 detached:     yes
-workflow_stage: declareDependencies[1.0.0]
+workflow_stage: settings[1.0.0]
 licence:      open
 licence_at:   the same MIT base as RimScent Extended
 upstream_mod_remotes: N/A      # RimScent (3645569466) is Steam only, no public git repository found 2026-09-26
 dependencies: declared
+workshop_required_items: n/a, not released yet
 showcase:     complete
 tested_on:
 workshop:
@@ -23,10 +24,9 @@ remaining:
   - unverified: Check-DefInjected.ps1 again ended without its terminal keys/errors summary on 2026-09-26
   - unverified: the complete dispatcher Pickle matrix has not yet produced terminal reports (base, Bees, and Stoneborn Cuisine in English and French)
   - unverified: Mod/About/PublishedFileId.txt (3811307974, matches the installed Workshop item) is untracked, decide whether to commit it
-  - open 4.e: Mod/About/OptionalCompat.xml missing, Check-OptionalCompat ERROR for vanillaexpanded.vanillatraitsexpanded (Patches/Animals.xml), also adamas.bees and det.sbcuisine to declare
 session:      options:    2026-09-26, static settings and test-matrix update
-updated:      2026-11-11, 3.c done, advance to declareDependencies
-protocols_read_sha: 321d7756ab0e5976c9320c0c03a36fc4603b1e27
+updated:      2026-11-11, declareDependencies done, advance to settings
+protocols_read_sha: 45357975862be47b344cc129a47910946cba3ac9
 ---
 
 # RimScent Extended: Farmyard Expansion — status
@@ -128,3 +128,23 @@ The 0.1.0 prepublication was reported by the owner, but its generated
 `Mod/About/PublishedFileId.txt` has not appeared in this checkout or the default local RimWorld
 Mods directory. Until its exact generated file is copied here, the prepublication cannot be
 recorded as a reproducible repository state.
+
+## Dependencies — 2026-11-11 (AUDIT.md 4.a to 4.g)
+
+Read from `About.xml`, `LoadFolders.xml`, `Patches/` and `Mod/About/OptionalCompat.xml` at commit 24233aa.
+
+- **Required** (`modDependencies`): RimScent `reo.RimScent` (Workshop 3645569466, carries the
+  scent system) and RimScent Extended `nelim.rimscent.extended` (engine, `ModExtension_PawnScent`).
+- **Load order** (`loadAfter`): Harmony, Core, both required mods, plus `adamas.bees` and
+  `det.sbcuisine` so their defs exist when the optional folders load. No `loadBefore`, no cycle
+  (read by hand; `sort-load-order.py` needs a full mods directory and was not run).
+- **Optional folders** (`LoadFolders.xml`, `<v1.6>` only): `Bees` when `adamas.bees` is active
+  (Workshop 1558161673), `StonebornHive` when `det.sbcuisine` is active (Workshop 3725224779).
+  Both are ordering-only, so they sit in `loadAfter` and not in `OptionalCompat.xml`.
+- **Optional compat** (`OptionalCompat.xml`, `Check-OptionalCompat.ps1` OK, 1 target): Vanilla
+  Traits Expanded `vanillaexpanded.vanillatraitsexpanded` (Workshop 2296404655, kind patch),
+  trait `VTE_Desensitized` added to anosmic traits through `MayRequire` on the element.
+- **DLC**: none. `supportedVersions` holds 1.6 only.
+- **Animal integrations (4.f)**: n/a, the mod adds scents, not an animal.
+- **Workshop required items**: `n/a, not released yet` (owner decision 2026-11-10, to be set at
+  `prepareRelease`).
