@@ -198,8 +198,8 @@ Read at the commit that adds `Tests/Rule-OwnValues.ps1`.
   PASS (8 of 8 operations), `Check-DefRefs` (no missing reference, all ParentName resolved),
   `Check-XmlFields` (9 files, no unknown field), `Check-DefInjected` (8 keys, 0 errors),
   `Check-Translations` PASS.
-- **7.d Pickle suites:** three features in `Tests/Pickle/Mod/Pickle/Features/`, `@requires`
+- **7.d Pickle suites:** four features in `Tests/Pickle/Mod/Pickle/Features/`, `@requires`
   `adamas.bees` and `det.sbcuisine` with a dedicated dependency map each, no `@wip`. Not run.
 - **7.a:** functional scenarios written in `TESTING.md` (seven, one per README behavior), four Pickle features now assert the wiring and load audit; the maps stage `nelim.pickletools.deffields` and `loadaudit`.
-- **7.f tested revision:** offline checks (`Test-Mod.ps1`, 6 passed) ran at the commit before 601fee4; no code commit since. No Pickle run yet.
+- **7.f tested revision:** offline checks (`Test-Mod.ps1`, 6 passed) ran at 19a5364; `Mod/` and `Rule-OwnValues.ps1` have not changed since (only tests, docs and STATUS). No Pickle run yet.
 - **7.h:** recorded here; `docs/runs/` holds no run, the six passes (base, Bees, Stoneborn in English and French) are the `playTests` work.
