@@ -21,7 +21,6 @@ workshop:
 remaining:
   - open 7.b: Rule-OwnValues.ps1 awaits Audit validation (Test-Mod.ps1 green, 6 passed)
   - unverified: the complete dispatcher Pickle matrix has not yet produced terminal reports (base, Bees, and Stoneborn Cuisine in English and French)
-  - unverified: Mod/About/PublishedFileId.txt (3811307974, matches the installed Workshop item) is untracked, decide whether to commit it
   - unverified: settings audit runtime check (no empty Mod options page, no visible or greyed MainButtons shortcut in a clean game), planned for playTests
   - unverified: in-game display of the EN and FR texts (raw keys, fallback, clipping), planned for playTests
   - open 7.a: Pickle scenarios only assert that defs exist and no error is logged; no scenario per promised behavior (animal filth, livestock FilthRate 4, Bees, Stoneborn), PUBLICATION.md absent
