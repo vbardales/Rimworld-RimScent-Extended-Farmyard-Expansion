@@ -1,5 +1,5 @@
 ---
-settings_audit: not_applicable
+settings_audit: partial
 localization: partial
 translation_en: partial
 translation_fr: unchecked
@@ -9,7 +9,7 @@ repo:         Rimworld-RimScent-Extended-Farmyard-Expansion
 remote:       https://github.com/vbardales/Rimworld-RimScent-Extended-Farmyard-Expansion.git
 visibility:   public
 detached:     yes
-workflow_stage: settings[1.0.0]
+workflow_stage: localize[1.0.0]
 licence:      open
 licence_at:   the same MIT base as RimScent Extended
 upstream_mod_remotes: N/A      # RimScent (3645569466) is Steam only, no public git repository found 2026-09-26
@@ -24,9 +24,10 @@ remaining:
   - unverified: Check-DefInjected.ps1 again ended without its terminal keys/errors summary on 2026-09-26
   - unverified: the complete dispatcher Pickle matrix has not yet produced terminal reports (base, Bees, and Stoneborn Cuisine in English and French)
   - unverified: Mod/About/PublishedFileId.txt (3811307974, matches the installed Workshop item) is untracked, decide whether to commit it
+  - unverified: settings audit runtime check (no empty Mod options page, no visible or greyed MainButtons shortcut in a clean game), planned for playTests
 session:      options:    2026-09-26, static settings and test-matrix update
-updated:      2026-11-11, declareDependencies done, advance to settings
-protocols_read_sha: 45357975862be47b344cc129a47910946cba3ac9
+updated:      2026-11-11, settings audit replayed, advance to localize
+protocols_read_sha: 2bb8c9b3388a3dbbd4577d1e9b97e9e555430295
 ---
 
 # RimScent Extended: Farmyard Expansion — status
@@ -148,3 +149,20 @@ Read from `About.xml`, `LoadFolders.xml`, `Patches/` and `Mod/About/OptionalComp
 - **Animal integrations (4.f)**: n/a, the mod adds scents, not an animal.
 - **Workshop required items**: `n/a, not released yet` (owner decision 2026-11-10, to be set at
   `prepareRelease`).
+
+## Settings audit — 2026-11-11 (MOD_SETTINGS.md 1 to 5, AUDIT.md 5.a to 5.h)
+
+Replaces the 2026-09-26 static result, which rested on `Tests/Check-Mod.ps1` (deleted 2026-11-06).
+Read at commit 44993b3.
+
+- **Inventory (5.a):** the mod ships only XML defs and patches: four ThoughtDefs, the filth and
+  livestock extensions, and two conditional folders (Bees, StonebornHive). The only tunable is
+  the animal-filth threshold (`aboveStat=FilthRate`, `aboveValue=4`), a balance constant of the
+  patch, with no stated player need to change it.
+- **Decision (5.b):** no settings. Adding one would be decorative; the threshold stays in XML.
+- **Static proof (5.f, partial):** `git ls-files Mod` lists no DLL, no `.cs`, no `Source/`
+  folder; a search of `Mod/` XML for `MainButtonDef`, `ModSettings`, `SettingsCategory` and
+  `Keyed` finds nothing. So no settings page and no MainButtons shortcut are shipped (5.c, 5.d
+  n/a, 5.e n/a).
+- **Not checked:** in a clean game, no empty Mod options page and no visible or greyed shortcut.
+  Needs the game: `settings_audit` stays `partial` until `playTests` (AUDIT.md section 5 intro).
