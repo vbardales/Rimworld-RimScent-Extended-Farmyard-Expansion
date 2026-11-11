@@ -9,7 +9,7 @@ repo:         Rimworld-RimScent-Extended-Farmyard-Expansion
 remote:       https://github.com/vbardales/Rimworld-RimScent-Extended-Farmyard-Expansion.git
 visibility:   public
 detached:     yes
-workflow_stage: code[1.0.0]
+workflow_stage: declareDependencies[1.0.0]
 licence:      open
 licence_at:   the same MIT base as RimScent Extended
 upstream_mod_remotes: N/A      # RimScent (3645569466) is Steam only, no public git repository found 2026-09-26
@@ -23,10 +23,10 @@ remaining:
   - unverified: Check-DefInjected.ps1 again ended without its terminal keys/errors summary on 2026-09-26
   - unverified: the complete dispatcher Pickle matrix has not yet produced terminal reports (base, Bees, and Stoneborn Cuisine in English and French)
   - unverified: Mod/About/PublishedFileId.txt (3811307974, matches the installed Workshop item) is untracked, decide whether to commit it
-  - open 3.c: CHANGELOG.md has no ## [Unreleased] section for 1.0.0
+  - open 4.e: Mod/About/OptionalCompat.xml missing, Check-OptionalCompat ERROR for vanillaexpanded.vanillatraitsexpanded (Patches/Animals.xml), also adamas.bees and det.sbcuisine to declare
 session:      options:    2026-09-26, static settings and test-matrix update
-updated:      2026-11-10, replay-audit to code[1.0.0]
-protocols_read_sha: e4ef6f89596a4ef3379e757fd803dbc5c630b921
+updated:      2026-11-11, 3.c done, advance to declareDependencies
+protocols_read_sha: 321d7756ab0e5976c9320c0c03a36fc4603b1e27
 ---
 
 # RimScent Extended: Farmyard Expansion — status
