@@ -27,7 +27,7 @@ remaining:
   - unverified: in-game display of the EN and FR texts (raw keys, fallback, clipping), planned for playTests
 session:      options:    2026-09-26, static settings and test-matrix update
 updated:      2026-11-11, translation audit replayed, waiting for the French review
-protocols_read_sha: 2bb8c9b3388a3dbbd4577d1e9b97e9e555430295
+protocols_read_sha: b6a106fe7793ab994bf84cdcb6872a2fb961cc54
 ---
 
 # RimScent Extended: Farmyard Expansion — status
