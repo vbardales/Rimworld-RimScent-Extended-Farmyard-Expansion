@@ -1,3 +1,5 @@
 # Hard dependencies resolved for the minimal pass; no optional integrations are activated.
 reo.RimScent 3645569466
 nelim.rimscent.extended path:RimScentExtended/Mod
+nelim.pickletools.deffields path:PickleTools/DefFieldSteps/Mod
+nelim.pickletools.loadaudit path:PickleTools/LoadAudit/Mod

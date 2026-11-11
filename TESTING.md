@@ -25,3 +25,23 @@ Keep only the terminal report directory for the current certification attempt un
 `Tests/Pickle/Evidence/`. Immediately reduce its durable record to one summary in `docs/runs/`
 with the SHA, pass map, language, `exitReason`, scenario counts, and evidence location. Delete
 older or superseded report directories; do not commit them.
+
+## Functional scenarios (AUDIT.md 7.a)
+
+One per behavior the README promises. Numbers are checked against the defs and patches
+(`Mod/Defs/Scents_Animals.xml`, `Mod/Patches/Animals.xml`, `Mod/Bees/`, `Mod/StonebornHive/`) and
+asserted by `Tests/Rule-OwnValues.ps1` offline, by the Pickle features in game. `PUBLICATION.md`
+does not exist yet; this list is rebuilt from it at `writeDocs`.
+
+| # | Behavior (README) | Precondition | Action | Expected | Where |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Animal droppings smell, at a real penalty | RimScent and RimScent Extended active, save loaded | read `Filth_AnimalFilth` | carries `ModExtension_Scent` with thought `RimScentExtended_Scent_AnimalFilth`, mood -3, stack 4 | `04-scent-wiring.feature`, scenario 1 |
+| 2 | Animals smell faintly, only past FilthRate 4 | same | read an animal race (`Muffalo`, child of `AnimalThingBase`) | `ModExtension_PawnScent`: thought `RimScentExtended_Scent_Livestock`, `aboveStat` FilthRate, `aboveValue` 4, mood -1 | `04-scent-wiring.feature`, scenario 2 |
+| 3 | Beehives and mead smell (Bees) | `adamas.bees` active | read `Bees_Beehive` | thought `RimScentExtended_Scent_Beehive`, mood +2, stack 2 | `02-bees.feature`, scenario 2 |
+| 4 | The insectiary smells (Stoneborn Cuisine) | `det.sbcuisine` active | read `SC_ArtificialHive` | thought `RimScentExtended_Scent_Insectiary`, mood -2, stack 2 | `03-stoneborn-cuisine.feature`, scenario 2 |
+| 5 | Optional support loads only with its mod | each mod absent in turn | load the base pass | no `Bees` or `StonebornHive` def, no error | `01-minimal-load.feature` (base map has neither) |
+| 6 | Nothing is written to the save | any pass | load, play, reload | no error, no missing def | `the load of the mod ... is clean` in each pass |
+| 7 | Works in any language, French injected | French pass | load the same saves in French | same results; French texts read by Virginie, display checked in game at `playTests` | six passes (base, Bees, Stoneborn, in English and French) |
+
+Not covered by any scenario, said plainly: the Housebroken interplay in the README is a
+consequence of the shared FilthRate value, not something this mod implements.
