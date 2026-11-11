@@ -39,8 +39,8 @@ does not exist yet; this list is rebuilt from it at `writeDocs`.
 | 2 | Animals smell faintly, only past FilthRate 4 | same | read an animal race (`Muffalo`, child of `AnimalThingBase`) | `ModExtension_PawnScent`: thought `RimScentExtended_Scent_Livestock`, `aboveStat` FilthRate, `aboveValue` 4, mood -1 | `04-scent-wiring.feature`, scenario 2 |
 | 3 | Beehives and mead smell (Bees) | `adamas.bees` active | read `Bees_Beehive` | thought `RimScentExtended_Scent_Beehive`, mood +2, stack 2 | `02-bees.feature`, scenario 2 |
 | 4 | The insectiary smells (Stoneborn Cuisine) | `det.sbcuisine` active | read `SC_ArtificialHive` | thought `RimScentExtended_Scent_Insectiary`, mood -2, stack 2 | `03-stoneborn-cuisine.feature`, scenario 2 |
-| 5 | Optional support loads only with its mod | each mod absent in turn | load the base pass | no `Bees` or `StonebornHive` def, no error | `01-minimal-load.feature` (base map has neither) |
-| 6 | Nothing is written to the save | any pass | load, play, reload | no error, no missing def | `the load of the mod ... is clean` in each pass |
+| 5 | Optional support loads only with its mod | base pass: neither optional mod staged | load the base pass | loads with no error; the `Bees` and `StonebornHive` folders are gated by `IfModActive` (asserted offline by `Rule-OwnValues.ps1`) | `01-minimal-load.feature`, `Rule-OwnValues.ps1` |
+| 6 | Nothing is written to the save | any pass | load the save | no error logged by the mod; the mod ships no assembly and no save data (`Rule-OwnValues.ps1`); adding or removing it on an ongoing game is not played | `the load of the mod ... is clean` in each pass |
 | 7 | Works in any language, French injected | French pass | load the same saves in French | same results; French texts read by Virginie, display checked in game at `playTests` | six passes (base, Bees, Stoneborn, in English and French) |
 
 Not covered by any scenario, said plainly: the Housebroken interplay in the README is a
