@@ -27,7 +27,7 @@ Languages: French (8 keys, 0 missing against English). English is the source sid
 | Key or path | Original | English | French | ? |
 |---|---|---|---|---|
 | `RimScentExtended_Scent_Insectiary.stages.insectiary.label` | insectiary | insectiary | insectarium |  |
-| `RimScentExtended_Scent_Insectiary.stages.insectiary.description` | Chitin, jelly and something sharply ammoniac. The hive smell gets into clothes. | Chitin, jelly and something sharply ammoniac. The hive smell gets into clothes. | De la chitine, de la gelée, et quelque chose de piquant qui tire sur l'ammoniac. L'odeur de la ruche s'accroche aux vêtements. |  |
+| `RimScentExtended_Scent_Insectiary.stages.insectiary.description` | Chitin, jelly and something sharply ammoniacal. The hive smell gets into clothes. | Chitin, jelly and something sharply ammoniacal. The hive smell gets into clothes. | De la chitine, de la gelée et quelque chose de piquant qui tire sur l'ammoniac. L'odeur de la ruche s'accroche aux vêtements. |  |
 
 ## Review line (Virginie only)
 
