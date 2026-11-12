@@ -52,7 +52,7 @@ RimScent by reo / ocarina0001. See ATTRIBUTION.md and LICENSE for details.
 		<!-- Le socle porte ModExtension_PawnScent, sans laquelle les animaux ne sentent
 		     rien : il faut passer apres lui. -->
 		<li>nelim.rimscent.extended</li>
-		<li>adamas.bees</li>
+		<li>sarg.rimbees</li>
 		<li>det.sbcuisine</li>
 	</loadAfter>
 </ModMetaData>

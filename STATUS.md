@@ -134,10 +134,10 @@ Read from `About.xml`, `LoadFolders.xml`, `Patches/` and `Mod/About/OptionalComp
 
 - **Required** (`modDependencies`): RimScent `reo.RimScent` (Workshop 3645569466, carries the
   scent system) and RimScent Extended `nelim.rimscent.extended` (engine, `ModExtension_PawnScent`).
-- **Load order** (`loadAfter`): Harmony, Core, both required mods, plus `adamas.bees` and
+- **Load order** (`loadAfter`): Harmony, Core, both required mods, plus `sarg.rimbees` and
   `det.sbcuisine` so their defs exist when the optional folders load. No `loadBefore`, no cycle
   (read by hand; `sort-load-order.py` needs a full mods directory and was not run).
-- **Optional folders** (`LoadFolders.xml`, `<v1.6>` only): `Bees` when `adamas.bees` is active
+- **Optional folders** (`LoadFolders.xml`, `<v1.6>` only): `Bees` when `sarg.rimbees` is active
   (Workshop 1558161673), `StonebornHive` when `det.sbcuisine` is active (Workshop 3725224779).
   Both are ordering-only, so they sit in `loadAfter` and not in `OptionalCompat.xml`.
 - **Optional compat** (`OptionalCompat.xml`, `Check-OptionalCompat.ps1` OK, 1 target): Vanilla
@@ -177,7 +177,7 @@ Read at commit 54d26b8, `Mod/` unchanged since.
   optional folder, under the same `LoadFolders` gates as the defs. `Check-Translations.ps1`:
   PASS, 8 source texts, French injections, no stale entry, no duplicate.
   `Check-DefInjected.ps1 -TransMod Mod` ended with `Keys checked: 8 - errors: 0` on 2026-11-11
-  (patch operations 34, four load states: base, +adamas.bees, +det.sbcuisine, all). This closes
+  (patch operations 34, four load states: base, +sarg.rimbees, +det.sbcuisine, all). This closes
   the three earlier runs that never printed their summary.
 - **Agreement and address (6.d):** read all eight French texts: no pawn-dependent sentence, no
   `tu`, `vous`, `nous` or imperative to the player. No agreement segment needed.
@@ -200,7 +200,7 @@ Read at the commit that adds `Tests/Rule-OwnValues.ps1`.
   `Check-XmlFields` (9 files, no unknown field), `Check-DefInjected` (8 keys, 0 errors),
   `Check-Translations` PASS.
 - **7.d Pickle suites:** four features in `Tests/Pickle/Mod/Pickle/Features/`, `@requires`
-  `adamas.bees` and `det.sbcuisine` with a dedicated dependency map each, no `@wip`. Not run.
+  `sarg.rimbees` and `det.sbcuisine` with a dedicated dependency map each, no `@wip`. Not run.
 - **7.a:** functional scenarios written in `TESTING.md` (seven, one per README behavior), four Pickle features now assert the wiring and load audit; the maps stage `nelim.pickletools.deffields` and `loadaudit`.
 - **7.f tested revision:** offline checks (`Test-Mod.ps1`, 6 passed) ran at 19a5364; `Mod/` and `Rule-OwnValues.ps1` have not changed since (only tests, docs and STATUS). No Pickle run yet.
 - **7.h:** recorded here; `docs/runs/` holds no run, the six passes (base, Bees, Stoneborn in English and French) are the `playTests` work.

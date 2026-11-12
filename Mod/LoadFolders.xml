@@ -3,7 +3,7 @@
 	<v1.6>
 		<!-- Racine : About, et les odeurs d'animaux qui ne dependent que du jeu de base. -->
 		<li>/</li>
-		<li IfModActive="adamas.bees">Bees</li>
+		<li IfModActive="sarg.rimbees">Bees</li>
 		<li IfModActive="det.sbcuisine">StonebornHive</li>
 	</v1.6>
 </loadFolders>

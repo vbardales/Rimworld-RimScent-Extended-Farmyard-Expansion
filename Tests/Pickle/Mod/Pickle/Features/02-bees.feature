@@ -1,4 +1,4 @@
-@requires:adamas.bees @requires:nelim.pickletools.deffields @requires:nelim.pickletools.loadaudit
+@requires:sarg.rimbees @requires:nelim.pickletools.deffields @requires:nelim.pickletools.loadaudit
 Feature: Bees integration loads its scent definition
 
   Scenario: active Bees support provides the beehive scent

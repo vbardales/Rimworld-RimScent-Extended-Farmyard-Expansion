@@ -14,7 +14,7 @@ own public extension point, plus `ModExtension_PawnScent` from RimScent Extended
 Nothing is copied from any of them. Each is targeted by `PatchOperation`s only, in a folder
 that loads solely when the mod is active:
 
-- **Bees** (`adamas.bees`) — hives, mead casks, honey, propolis.
+- **Bees** (`sarg.rimbees`) — hives, mead casks, honey, propolis.
 - **Stoneborn Cuisine** (`det.sbcuisine`) — the insectiary.
 
 ## Housebroken

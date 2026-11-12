@@ -15,8 +15,8 @@ Assert-True (@($meta.ModMetaData.supportedVersions.li) -contains '1.6') 'RimWorl
 $deps = @($meta.ModMetaData.modDependencies.li.packageId)
 Assert-True ($deps.Count -eq 2 -and $deps -contains 'reo.RimScent' -and $deps -contains 'nelim.rimscent.extended') 'Exactly two hard dependencies: reo.RimScent and nelim.rimscent.extended'
 $after = @($meta.ModMetaData.loadAfter.li)
-foreach ($id in 'reo.RimScent', 'nelim.rimscent.extended', 'adamas.bees', 'det.sbcuisine') { Assert-True ($after -contains $id) "loadAfter holds $id" }
-Assert-True (@($deps | Where-Object { $_ -in 'adamas.bees', 'det.sbcuisine' }).Count -eq 0) 'The optional integrations are never hard dependencies'
+foreach ($id in 'reo.RimScent', 'nelim.rimscent.extended', 'sarg.rimbees', 'det.sbcuisine') { Assert-True ($after -contains $id) "loadAfter holds $id" }
+Assert-True (@($deps | Where-Object { $_ -in 'sarg.rimbees', 'det.sbcuisine' }).Count -eq 0) 'The optional integrations are never hard dependencies'
 
 # The four scents: defName, mood effect, stack limit, duration.
 $expected = @(
@@ -42,7 +42,7 @@ Assert-True (([regex]::Matches($animals, '<aboveStat>FilthRate</aboveStat>\s*<ab
 
 # The optional folders load only when their mod is active.
 $lf = Get-Content (Join-Path $mod 'LoadFolders.xml') -Raw -Encoding UTF8
-Assert-True ($lf -match '<li IfModActive="adamas\.bees">Bees</li>') 'Bees folder gated by adamas.bees'
+Assert-True ($lf -match '<li IfModActive="sarg.rimbees">Bees</li>') 'Bees folder gated by sarg.rimbees'
 Assert-True ($lf -match '<li IfModActive="det\.sbcuisine">StonebornHive</li>') 'StonebornHive folder gated by det.sbcuisine'
 
 # Optional compat: the one patched third-party mod, Vanilla Traits Expanded.

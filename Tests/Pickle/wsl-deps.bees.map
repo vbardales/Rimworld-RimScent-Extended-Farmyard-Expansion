@@ -1,6 +1,7 @@
 # Optional integration pass. Keep the terminal newline: the staging reader otherwise drops it.
 reo.RimScent 3645569466
 nelim.rimscent.extended path:RimScentExtended/Mod
-adamas.bees 1558161673
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+sarg.rimbees 1558161673
 nelim.pickletools.deffields path:PickleTools/DefFieldSteps/Mod
 nelim.pickletools.loadaudit path:PickleTools/LoadAudit/Mod
