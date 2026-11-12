@@ -2,9 +2,9 @@
 <Patch>
 
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ThingDef[(defName="Bees_Beehive" or defName="Bees_Wildhive" or defName="Bees_MeadFermentingBarrel" or defName="Bees_Mead" or defName="Bees_Propolis") and modExtensions]/modExtensions</xpath>
+    <xpath>Defs/ThingDef[(defName="RB_Beehouse" or defName="RB_BunkerBeehouse" or defName="RB_ClimatizedBeehouse" or defName="RB_AdvancedBeehouse" or defName="RB_AdvancedClimatizedBeehouse" or defName="RB_SpacerBeehouse" or defName="RB_MeadFermentingBarrel") and modExtensions]/modExtensions</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[(defName="Bees_Beehive" or defName="Bees_Wildhive" or defName="Bees_MeadFermentingBarrel" or defName="Bees_Mead" or defName="Bees_Propolis") and modExtensions]/modExtensions</xpath>
+      <xpath>Defs/ThingDef[(defName="RB_Beehouse" or defName="RB_BunkerBeehouse" or defName="RB_ClimatizedBeehouse" or defName="RB_AdvancedBeehouse" or defName="RB_AdvancedClimatizedBeehouse" or defName="RB_SpacerBeehouse" or defName="RB_MeadFermentingBarrel") and modExtensions]/modExtensions</xpath>
       <value>
         <li Class="RimScentReworked.ModExtension_Scent">
           <thought>RimScentExtended_Scent_Beehive</thought>
@@ -14,9 +14,9 @@
   </Operation>
 
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ThingDef[(defName="Bees_Beehive" or defName="Bees_Wildhive" or defName="Bees_MeadFermentingBarrel" or defName="Bees_Mead" or defName="Bees_Propolis") and not(modExtensions)]</xpath>
+    <xpath>Defs/ThingDef[(defName="RB_Beehouse" or defName="RB_BunkerBeehouse" or defName="RB_ClimatizedBeehouse" or defName="RB_AdvancedBeehouse" or defName="RB_AdvancedClimatizedBeehouse" or defName="RB_SpacerBeehouse" or defName="RB_MeadFermentingBarrel") and not(modExtensions)]</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[(defName="Bees_Beehive" or defName="Bees_Wildhive" or defName="Bees_MeadFermentingBarrel" or defName="Bees_Mead" or defName="Bees_Propolis") and not(modExtensions)]</xpath>
+      <xpath>Defs/ThingDef[(defName="RB_Beehouse" or defName="RB_BunkerBeehouse" or defName="RB_ClimatizedBeehouse" or defName="RB_AdvancedBeehouse" or defName="RB_AdvancedClimatizedBeehouse" or defName="RB_SpacerBeehouse" or defName="RB_MeadFermentingBarrel") and not(modExtensions)]</xpath>
       <value>
         <modExtensions>
           <li Class="RimScentReworked.ModExtension_Scent">
