@@ -25,7 +25,7 @@ remaining:
   - unverified: 8.c six Pickle passes filed 2026-11-11 at 008d118, runner auto, waiting for RUN_DONE: base EN 20261111-193326-865-dbfb, base FR 20261111-193329-595-a3f4, Bees EN 20261111-193332-987-f5ff, Bees FR 20261111-193337-021-d8f4, Stoneborn EN 20261111-193340-414-0edd, Stoneborn FR 20261111-193344-478-0872; steps of DefFieldSteps never played, a red on feature 04 is replayed alone
 session:      options:    2026-09-26, static settings and test-matrix update
 updated:      2026-11-11, writeTests done, advance to playTests
-protocols_read_sha: 23a988df9c0997847c27c18bc4512d9fa6526327
+protocols_read_sha: 9481d090854f082b638e84ad647a202fec7de6d2
 ---
 
 # RimScent Extended: Farmyard Expansion — status
