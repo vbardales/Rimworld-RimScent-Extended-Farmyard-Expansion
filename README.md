@@ -11,7 +11,7 @@ keep animals. A rotting corpse in the dining room was already covered; a barn fl
 - **Animal droppings**, at a real penalty. The stench of a barn nobody has mucked out.
 - **The animals themselves**, faintly, and only past a threshold — hide, hay and warm
   animal. Not foul exactly, but it clings.
-- **Beehives, wild hives, mead casks, honey and propolis** (Bees): warm beeswax, thick and
+- **Beehives, wild hives, mead casks and mead** (Bees): warm beeswax, thick and
   summery.
 - **The insectiary** (Stoneborn Cuisine): chitin, jelly and something sharply ammoniac.
 
