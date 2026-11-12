@@ -19,10 +19,10 @@ showcase:     complete
 tested_on:
 workshop:
 remaining:
-  - unverified: the complete dispatcher Pickle matrix has not yet produced terminal reports (base, Bees, and Stoneborn Cuisine in English and French)
+  - unverified: Bees scope: the patch covers six beehouses and the mead barrel only, while About.xml still promises wild hives, honey and propolis; Virginie to choose (extend the patch or shorten the text)
   - unverified: settings audit runtime check (no empty Mod options page, no visible or greyed MainButtons shortcut in a clean game), planned for playTests
   - unverified: in-game display of the EN and FR texts (raw keys, fallback, clipping), planned for playTests
-  - unverified: 8.c six Pickle passes refiled 2026-11-12 at 41c22db (list-index step fixed by PiT, Bees packageId fixed to sarg.rimbees, VEF staged), runner auto, waiting for RUN_DONE: base EN 20261112-145200-757-e254, base FR 20261112-145207-340-6d28, Bees EN 20261112-145229-425-5e2b, Bees FR 20261112-145238-130-ead1, Stoneborn EN 20261112-145249-763-5bf8, Stoneborn FR 20261112-145255-253-17ca
+  - verified 2026-11-12 at 3b38027: six Pickle passes green, exit 0, no failure (base EN e254 and FR 6d28: 4 passed 4 skipped; Bees EN 849b and FR ead1: 6 passed 2 skipped; Stoneborn EN 5bf8 and FR 17ca: 6 passed 2 skipped; skipped = the other optional mod's scenarios, by design). Proofs: Tests/Pickle/Evidence/20261112-3b38027-*. Found and fixed on the way: Alpha Bees packageId is sarg.rimbees and its defNames are RB_* (the mod used adamas.bees and Bees_*)
 session:      options:    2026-09-26, static settings and test-matrix update
 updated:      2026-11-11, writeTests done, advance to playTests
 protocols_read_sha: 9481d090854f082b638e84ad647a202fec7de6d2
