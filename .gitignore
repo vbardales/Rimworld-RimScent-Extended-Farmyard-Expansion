@@ -7,3 +7,5 @@ Source/bin/
 *.dds
 /Tests/Pickle/Evidence/
 .firecrawl/
+/Art/.render/
+desktop.ini
